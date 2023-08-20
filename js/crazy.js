@@ -17,7 +17,7 @@ console.log("hej" - 5)
 //NaN (sin egen type, kinda som null) kan derfor bruges videre i beregninger og give underlige svar, så hvis
 //man får underlige tal så er det måske det her
 
-out("jeg er i out" + 4>5)
+out("jeg er i out" + 4>5) //bliver til streng4 > 5 og venstresiden er NaN som er mindre end 5, false
 //erik gør det her med at lave en funktion til console.log()
 //her udskrives kun false og ikke strengen. Den expression er kun false så hvis man bruger dette
 //i en if giver det noget hetl andet end forventet
@@ -61,7 +61,16 @@ arr.forEach(s => console.log(s)) //=> lambda, udskriver det samme som linjen ove
 //s => console.log er en anonym funktion, den har en parameter s som peger på hver index,
 //højresiden er en funktion
 
+const m = 9999999999999999999999999999999999
+const n = 9999999999999999999999999999999999.5
+console.log(m ==n) //er true fordi den ikke kan håndtere så store tal
 
+const lk = 0.1
+const jk = 0.2
+const gh = 0.3
+
+console.log(gh == lk+jk) //false fordi noget meed bit ikke fungerer og fordi js er typeless
+console.log(0.1+0.2) //rounding error
 
 
 
